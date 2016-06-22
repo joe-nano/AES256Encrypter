@@ -1,9 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "AES256Encrypter"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A simple category on NSData for AES256 encryption."
-
   s.description  = <<-DESC
                    AES256Encrypter provides methods to encrypt/decrypt NSData with a given key.
 
@@ -13,11 +12,11 @@ Pod::Spec.new do |s|
                    * 
                    DESC
 
-  s.homepage     = "https://github.com/dhilowitz/AES256Encrypter"
+  s.homepage     = "https://github.com/soheilbm/AES256Encrypter"
   s.license      = "Unknown"
   s.author       = "David Hilowitz??"
 
-  s.source       = { :git => "git@github.com:dhilowitz/AES256Encrypter.git", :tag => "0.0.1" }
+  s.source       = { :git => "git@github.com:soheilbm/AES256Encrypter.git", :tag => "0.0.2" }
 
   s.source_files  = 'AES256Encrypter/NSDataAES256.{h,m}' 
   s.requires_arc  = true
