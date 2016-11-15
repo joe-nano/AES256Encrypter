@@ -77,4 +77,24 @@
     return [self makeCryptedVersionWithKeyData:[key bytes] ofLength:(int)[key length] decrypt:YES];
 }
 
+- (NSDictionary*) decryptDataWithKey:(NSString *)key{
+    NSData *decriptedPlist = [self decryptedWithKey:[key dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSError *error;
+    NSPropertyListFormat format;
+    
+    NSDictionary *dict = [NSPropertyListSerialization propertyListWithData:decriptedPlist options:NSPropertyListImmutable format:&format error:&error];
+    
+    if ([dict isKindOfClass:[NSDictionary class]]) {
+        return dict;
+        
+    }else{
+        
+        NSLog(@"Error in decripting the data file. Returning nil.");
+        return nil;
+    }
+    
+    
+}
+
 @end

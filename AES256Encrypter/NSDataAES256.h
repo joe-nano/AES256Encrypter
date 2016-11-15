@@ -13,5 +13,5 @@
 
 - (NSData*) encryptedWithKey:(NSData*) key;
 - (NSData*) decryptedWithKey:(NSData*) key;
-
+- (NSDictionary*) decryptDataWithKey:(NSString *)key;
 @end
